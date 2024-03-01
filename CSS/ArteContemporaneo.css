@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #bea576;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+nav {
+    position: fixed; /* Fija la posición del menú */
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+    top: 0; /* Alinea el menú al borde superior de la pantalla */
+  }
+  
+  /* Asegúrate de que el contenido no se superponga con el menú */
+  section {
+    padding-top: 80px; /* Ajusta el relleno superior para evitar que el contenido se oculte detrás del menú */
+  }
+nav{
+    height: 80px;
+    width: 100%;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    /*border: 2px light #5d6678;*/
+}
+.enlace{
+    justify-content: center;
+    padding: 50px 50px;
+    color: #fff;
+}
+.logo{
+    height: 60px;
+    width: 165px;
+    margin-bottom: 50%;
+    margin-top: 1%;
+    margin-left: 25px;
+}
+nav ul{
+    float: right;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #333333;
+    font-size: 16px;
+    padding: 50px 25px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+footer {
+    position: fixed; /* Fija el footer en la parte superior de la ventana del navegador */
+    left: 0; /* Lo sitúa en el borde izquierdo */
+    top: 0; /* Lo sitúa en la parte superior */
+    width: 100%; /* Ancho completo */
+    background-color: white; /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el contenido del footer */
+    padding: 20px 0; /* Añade espacio interno al contenido */ 
+}
+button{
+padding: 8px 24px;
+background-color: #be9c79;
+justify-content: center;
+margin-top: 10px;
+cursor: pointer;
+color: #333333;
+border: none;
+margin-left: 1%;
+font-family: 'Poppins', sans-serif;
+font-size: 18px;
+}

@@ -1,0 +1,144 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
+	position: relative;
+	background: #ffffff;
+    /*border: 2px light #5d6678;*/
+}
+.enlace{
+    justify-content: center;
+    padding: 50px 50px;
+    color: red;
+}
+.logo{
+    height: 60px;
+    width: 165px;
+    margin-bottom: 50%;
+    margin-top: 1%;
+    margin-left: 25px;
+}
+nav ul{
+    float: right;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #333333;
+    font-size: 16px;
+    padding: 50px 25px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+	background: #F4F4FA;
+    font-family: 'Open Sans', sans-serif;
+	
+}
+.h1{
+	font-weight: bold;
+}
+
+header {
+	background: #bea576;
+	color: #fff;
+	text-align: center;
+	
+	padding: 50px 0;
+	height: 400px;
+	position: absolute;
+	top:auto;
+	width: 100%;
+}
+
+header .titulo {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-weight: 300;
+}
+
+main {
+	margin-top: 150px;
+}
+
+main .contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+/* ------------------------- */
+/* Estilos CSS del Reproductor */
+/* ------------------------- */
+.fm-video {
+	width: 100%;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);
+}
+
+.fm-video .vjs-control-bar {
+	background: #F4F4F4;
+	color: #cfb585;
+}
+
+.fm-video .vjs-play-progress,
+.fm-video .vjs-volume-level {
+	background: #cfb585;
+}
+
+.fm-video .vjs-slider {
+	background: #cfb585;
+}
+
+.video-js:hover .vjs-big-play-button {
+	background: rgba(0,0,0,.2);
+}
+
+.fm-video .vjs-big-play-button {
+	background: rgba(0,0,0,.2);
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 100%;
+	border:none;
+}
+
+.fm-video .vjs-big-play-button:hover {
+	background: rgba(0,0,0,.5);
+}
+
+article {
+	margin: 50px 0;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+	line-height: 28px;
+	padding: 40px;
+}
+
+article h2 {
+	color: #cfb585;
+	font-size: 32px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		position: relative;
+		height: auto;
+	}
+
+	main {
+		margin-top: 50px;
+	}
+}
