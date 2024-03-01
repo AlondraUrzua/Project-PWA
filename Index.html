@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte a través de las épocas</title>
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <!--HEADER-->
+    <nav>
+      <ul>
+          <li> <a href="Index.html"> Home </a></li>
+          <li> <a href="AboutUs.html"> About us </a></li>
+          <li> <a href="Contact.html"> Contact </a></li>
+          <li> <a href="LoginAndRegister.php"> Log out </a></li>
+      </ul>
+  </nav>
+      <!--MENU-->
+
+  <div class="titulo1">
+      <h1> Art Gallery </h1>
+      </div>
+      
+      <div class="menu">
+      <div class="columna1">
+          <div class="ifo-card">
+              <img src="Images/leonardo1.jpg" alt="Artwork 1"  class="img1" onclick="showFullscreen('Images/leonardo1.jpg')">
+              <p>Renacimiento</p>
+              <a href="Renacimiento.html">
+                  <button class="btn ">See more</button>
+              </a>
+          </div>
+      </div>
+
+      <div class="columna2">
+          <div class="ifo-card">
+              <img src="Images/Girasol.jpeg" alt="Artwork 2"  class="img2" onclick="showFullscreen('Images/Girasol.jpeg')">
+              <p> Barroco </p>
+              <a href="Barroco.html">
+                  <button class="btn ">See more</button>
+              </a>
+          </div>
+      </div>
+
+      <div class="columna3">
+          <div class="ifo-card">
+              <img src="Images/ElGrito.jpg" alt="Artwork 3"  class="img3" onclick="showFullscreen('Images/ElGrito.jpg')">
+              <p>Arte Contemporaneo</p>
+              <a href="ArteContemporaneo.html">
+                  <button class="btn">See more</button>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="fullscreen-view" id="fullscreenView" onclick="closeFullscreen()">
+    <img src="" alt="Fullscreen Image">
+  </div>
+
+  <script>
+    function showFullscreen(imageSrc) {
+      const fullscreenView = document.getElementById('fullscreenView');
+      const fullscreenImage = fullscreenView.querySelector('img');
+
+      fullscreenImage.src = imageSrc;
+      fullscreenView.style.display = 'flex';
+    }
+
+    function closeFullscreen() {
+      const fullscreenView = document.getElementById('fullscreenView');
+      fullscreenView.style.display = 'none';
+    }
+  </script>
+    <script>navigator.serviceWorker.register("service-worker.js")</script>
+</body>
+</html>
+
